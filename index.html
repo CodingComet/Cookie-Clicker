@@ -1,0 +1,130 @@
+
+<html>
+    <head>
+
+        <title>Cookie CLicker</title>
+
+    </head>
+
+    <body>
+        <div id = "space"></div>
+        <div id = "cookie" onclick="cookieClick()">
+            <img src="https://thumbs.gfycat.com/ElegantRecklessEmu-size_restricted.gif"  width="200px"/>
+        </div>
+        
+        <p>Number of Points:</p>
+        
+        <div id = "numbers"></div>
+        <div id= "upgradeLevel"></div>
+
+        <p>Whenever you click the cookie you produce more points!</p>
+			<p>
+			When you reach 50 point, you will get 3 points every time you click on the cookie.<br>
+			When you reach 500 point, you will get 10 points every time you click on the cookie.<br>
+			When you reach 1,000 point, you will get 25 points every time you click on the cookie.<br>
+			When you reach 100,000 point, you will get 1000 points every time you click on the cookie.
+			</p>
+
+
+
+        </table> 
+		<style>
+		body{
+		background:rgb(179, 170, 209);
+		text-align:center;
+		padding-top:70px;
+		font-size:18px;
+		font-family:Stencil Std, fantasy;
+		}
+		p{
+		margin: 5px;
+		}
+		img{
+		transition: all 0.45s;
+		}
+		img:hover{
+		transform: scale(0.9);
+		}
+	
+	#space {
+    margin: auto;
+    text-align:center;
+    padding-top: 20px;
+    margin-bottom: 5px;
+    font-size: 30px;
+    border:2px #000000 solid;
+    border-radius:10px;
+    background-color: rgb(142, 87, 87);
+    color: white;
+    width:389px;
+    height:60px;
+}
+	table {
+    margin-top: 10px;
+    border: 2px solid;
+    border-radius: 5px;
+}
+	td {
+    border:1px solid;
+}
+		
+	#numbers {
+    margin: auto;
+    text-align:center;
+    padding-top: 20px;
+    margin-bottom: 20px;
+    font-size: 30px;
+    border:2px solid;
+    border-radius:6px;
+    background-color:rgb(202, 72, 72);
+    width:120px;
+    height:60px;    
+}
+		</style>
+		<script>
+var num = 0;
+
+window.onload = function () {
+        var name = prompt("What is your name");
+        
+        var space = document.getElementById("space");
+        
+        space.innerHTML = name + "'s Bakery";
+}
+
+
+function cookieClick() { 
+    num += 1;
+
+    
+   
+    
+    numbers.innerHTML = num;      
+ 
+    if(num >= 50 ){
+        num += 2	;
+   
+    }
+
+    
+    if(num >= 500) {
+        num += 10;
+    }
+
+   
+    if(num >= 1000) {
+        num += 25;
+
+    }
+
+   
+    if(num >= 100000) {
+        num += 1000;
+
+    }
+}
+
+		</script>
+    </body>
+
+</html>
